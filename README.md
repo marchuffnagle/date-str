@@ -33,7 +33,7 @@ const { DateStr, isDateStr, toDateStr } = require('date-str');
 
 ### Example
 
-```js
+```ts
 interface Person {
   name: string,
   birthday: DateStr
@@ -43,6 +43,8 @@ const ralph: Person = {
   name: 'Ralph',
   birthday: toDateStr(new Date())
 }
+
+ralph.birthday = toDateStr('2012-10-19');
 
 function datePrinter(date: DateStr | Date) {
   if (isDateStr(date)) {
