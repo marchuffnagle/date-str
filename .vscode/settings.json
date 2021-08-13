@@ -1,0 +1,12 @@
+{
+    "editor.tabSize": 2,
+    "eslint.format.enable": true,
+    "[json]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[typescript]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    }
+}

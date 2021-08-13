@@ -1,0 +1,50 @@
+{
+  "name": "date-str",
+  "version": "1.0.0",
+  "description": "A TypeScript type for handling ISO-8601 dates",
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/esm/index.js",
+  "files": [
+    "lib/cjs/index.d.ts",
+    "lib/cjs/index.js",
+    "lib/esm/index.d.ts",
+    "lib/esm/index.js"
+  ],
+  "scripts": {
+    "clean": "rm -rf lib node_modules",
+    "prepublish": "npm run tsc",
+    "test": "eslint . --ext .ts && jest",
+    "tsc": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marchuffnagle/date-str.git"
+  },
+  "keywords": [
+    "typescript",
+    "ISO8601",
+    "date"
+  ],
+  "author": "Marc Huffnagle <marc@huffnagle.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marchuffnagle/date-str/issues"
+  },
+  "homepage": "https://github.com/marchuffnagle/date-str#readme",
+  "devDependencies": {
+    "@types/jest": "^27.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.29.1",
+    "@typescript-eslint/parser": "^4.29.1",
+    "eslint": "^7.32.0",
+    "jest": "^27.0.6",
+    "ts-jest": "^27.0.4",
+    "typescript": "^4.3.5"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": [
+      "<rootDir>/lib/"
+    ]
+  }
+}
